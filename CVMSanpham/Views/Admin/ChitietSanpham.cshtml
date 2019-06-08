@@ -1,0 +1,101 @@
+﻿@model CVMSanpham.Models.SanPham
+
+@{
+    ViewBag.Title = "ChitietSanpham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div>
+    <h4>Sản phẩm:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Giá khuyến mãi:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaHienTai)
+        </dd>
+
+        <dt>
+            Giá Gốc:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaCu)
+        </dd>
+
+        <dt>
+           Mô tả:
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.MoTa)
+        </dd>
+
+        <dt>
+           Chi tiết
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.MoTaCT)
+        </dd>
+
+        <dt>
+            Hãng Sản Xuất
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHang)
+        </dd>
+
+        <dt>
+           Loại sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCD)
+        </dd>
+
+        <dt>
+            Khuyến mãi:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhuyenMai)
+        </dd>
+
+        
+
+        <dt>
+           Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhat)
+        </dd>
+
+        <dt>
+            Hình sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anhbia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

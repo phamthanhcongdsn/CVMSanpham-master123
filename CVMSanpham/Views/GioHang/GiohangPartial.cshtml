@@ -1,0 +1,53 @@
+﻿<!-- total-cart -->
+@using CVMSanpham.Models
+@model List<Giohang>
+<div class="total-cart f-left">
+    <div class="total-cart-in">
+        <div class="cart-toggler">
+            <a href="@Url.Action("GioHang","GioHang")">
+                <span class="cart-quantity">@ViewBag.Tongsoluong</span><br>
+                <span>@ViewBag.Tongtien đ</span>
+                <span class="cart-icon">
+                    <i class="zmdi zmdi-shopping-cart-plus"></i>
+                </span>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <div class="top-cart-inner your-cart">
+                    <h5 class="text-capitalize">Giỏ hàng</h5>
+                </div>
+            </li>
+            <li>
+                <div class="total-cart-pro">
+                    <!-- single-cart -->
+                
+                    <!-- single-cart -->
+                    
+                </div>
+            </li>
+            <li>
+                <div class="top-cart-inner subtotal">
+                    <h4 class="text-uppercase g-font-2">
+                        Tổng tiền  =
+                        <span>@ViewBag.Tongtien đ</span>
+                    </h4>
+                </div>
+            </li>
+            <li>
+                <div class="top-cart-inner view-cart">
+                    <h4 class="text-uppercase">
+                        <a href="#">@Html.ActionLink("Giỏ Hàng", "Giohang", "GioHang")</a>
+                    </h4>
+                </div>
+            </li>
+            <li>
+                <div class="top-cart-inner check-out">
+                    <h4 class="text-uppercase">
+                        <a href="#">@Html.ActionLink("Đặt Hàng", "Giohang", "GioHang")</a>
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
